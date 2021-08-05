@@ -76,7 +76,7 @@ class TitleState extends MusicBeatState
 
 	function startIntro()
 	{
-		Conductor.changeBPM(158);
+		Conductor.changeBPM(93);
 		persistentUpdate = true;
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('titleBG'));
@@ -111,6 +111,7 @@ class TitleState extends MusicBeatState
 		FlxTween.tween(mord, {x: 0}, 2, {ease: FlxEase.quintOut});
 		FlxTween.tween(twi, {x: 0}, 2, {ease: FlxEase.quintOut});
 		FlxTween.tween(titleText, {alpha: 1}, 0.5, {startDelay: 2});
+		
 	}
 
 	var transitioning:Bool = false;
@@ -132,7 +133,6 @@ class TitleState extends MusicBeatState
 			{
 				titleText.animation.play('press');
 
-				FlxG.camera.flash(FlxColor.WHITE, 1);
 				FlxG.sound.play('assets/sounds/confirmMenu' + TitleState.soundExt, 0.7);
 
 				transitioning = true;

@@ -45,8 +45,7 @@ class TitleVidState extends MusicBeatState
 		FlxG.mouse.visible = false;
 		FlxG.sound.muteKeys = null;
 
-		FlxG.sound.cache("assets/music/klaskiiLoop.ogg");
-		FlxG.sound.playMusic('assets/music/freakyMenu' + TitleState.soundExt, 0);
+		FlxG.sound.cache("assets/music/menuLoop.ogg");
 
 		FlxG.save.bind('data');
 
@@ -74,25 +73,14 @@ class TitleVidState extends MusicBeatState
 		diamond.destroyOnNoUse = false;
 
 		FlxTransitionableState.defaultTransIn = new TransitionData(FADE, FlxColor.BLACK, 1, new FlxPoint(0, -1), {asset: diamond, width: 32, height: 32},
-			new FlxRect(-200, -200, FlxG.width * 1.4, FlxG.height * 1.4));
+			new FlxRect(-1000, -200, FlxG.width * 5, FlxG.height * 5));
 		FlxTransitionableState.defaultTransOut = new TransitionData(FADE, FlxColor.BLACK, 0.7, new FlxPoint(0, 1),
-			{asset: diamond, width: 32, height: 32}, new FlxRect(-200, -200, FlxG.width * 1.4, FlxG.height * 1.4));
+			{asset: diamond, width: 32, height: 32}, new FlxRect(-1000, -200, FlxG.width * 5, FlxG.height * 5));
 
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
-		if(!Main.novid){
-			FlxG.switchState(new VideoState('assets/videos/klaskiiTitle.webm', function(){
-
-				FlxG.camera.flash(FlxColor.WHITE, 60);
-				FlxG.sound.playMusic("assets/music/klaskiiLoop.ogg", 0.75);
-				FlxG.switchState(new TitleState());
-			}, 90, true));
-		}
-		else{
-			FlxG.camera.flash(FlxColor.WHITE, 60);
-			FlxG.sound.playMusic("assets/music/klaskiiLoop.ogg", 0.75);
-			FlxG.switchState(new TitleState());
-		}
+		FlxG.sound.playMusic("assets/music/menuLoop.ogg", 0.75);
+		FlxG.switchState(new TitleState());
 	}
 }
