@@ -40,15 +40,14 @@ class FreeplayState extends MusicBeatState
 
 		curSelected = 0;
 
-		for (i in 0...initSonglist.length)
-		{
-			songs.push(new SongMetadata(initSonglist[i], 1, 'gf'));
-		}
+		
+			songs.push(new SongMetadata('Airplanes', 1, 'mordecai'));
+		
 
 		var isDebug:Bool = true;
 
-		if (StoryMenuState.weekUnlocked[2] || isDebug)
-			addWeek(['Airplanes'], 1, ['mordecai']);
+		//if (StoryMenuState.weekUnlocked[2] || isDebug)
+		//	addWeek(['Airplanes'], 1, ['mordecai']);
 
 		
 
