@@ -17,34 +17,16 @@ class Startup extends MusicBeatState
     var loadingText:FlxText;
 
     var songsCached:Bool = Main.skipsound;
-    var songs:Array<String> =   ["Tutorial", 
-                                "Bopeebo", "Fresh", "Dadbattle", 
-                                "Spookeez", "South", "Monster",
-                                "Pico", "Philly", "Blammed", 
-                                "Satin-Panties", "High", "Milf", 
-                                "Cocoa", "Eggnog", "Winter-Horrorland", 
-                                "Senpai", "Roses", "Thorns"];
+    var songs:Array<String> =   ["Airplanes"];
                                 
     //List of character graphics and some other stuff.
     //Just in case it want to do something with it later.
     var charactersCached:Bool = Main.skipcharacters;
-    var characters:Array<String> =   ["BOYFRIEND", "bfCar", "christmas/bfChristmas", "weeb/bfPixel", "weeb/bfPixelsDEAD",
-                                    "GF_assets", "gfCar", "christmas/gfChristmas", "weeb/gfPixel",
-                                    "DADDY_DEAREST", "spooky_kids_assets", "Monster_Assets",
-                                    "Pico_FNF_assetss", "Mom_Assets", "momCar",
-                                    "christmas/mom_dad_christmas_assets", "christmas/monsterChristmas",
-                                    "weeb/senpai", "weeb/spirit", "weeb/senpaiCrazy"];
+    var characters:Array<String> =   ["mordecai", "GF_assets", "twi"];
 
     var graphicsCached:Bool = Main.skipgraphics;
-    var graphics:Array<String> =    ["logoBumpin", "titleBG", "gfDanceTitle", "titleEnter",
-                                    "stageback", "stagefront", "stagecurtains",
-                                    "halloween_bg",
-                                    "philly/sky", "philly/city", "philly/behindTrain", "philly/train", "philly/street", "philly/win0", "philly/win1", "philly/win2", "philly/win3", "philly/win4",
-                                    "limo/bgLimo", "limo/fastCarLol", "limo/limoDancer", "limo/limoDrive", "limo/limoSunset",
-                                    "christmas/bgWalls", "christmas/upperBop", "christmas/bgEscalator", "christmas/christmasTree", "christmas/bottomBop", "christmas/fgSnow", "christmas/santa",
-                                    "christmas/evilBG", "christmas/evilTree", "christmas/evilSnow",
-                                    "weeb/weebSky", "weeb/weebSchool", "weeb/weebStreet", "weeb/weebTreesBack", "weeb/weebTrees", "weeb/petals", "weeb/bgFreaks",
-                                    "weeb/animatedEvilSchool"];
+    var graphics:Array<String> =    ["titleMord", "titleMord", "titleTwi", "titleEnter",
+                                    "airplanes/grass", "airplanes/spacebg", "airplanes/boper", "airplanes/starz"];
 
     var cacheStart:Bool = false;
 

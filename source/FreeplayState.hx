@@ -36,12 +36,9 @@ class FreeplayState extends MusicBeatState
 
 		openfl.Lib.current.stage.frameRate = 144;
 
-		var initSonglist = CoolUtil.coolTextFile('assets/data/freeplaySonglist.txt');
-
 		curSelected = 0;
-
 		
-			songs.push(new SongMetadata('Airplanes', 1, 'mordecai'));
+		songs.push(new SongMetadata('Airplanes', 1, 'mordecai'));
 		
 
 		var isDebug:Bool = true;

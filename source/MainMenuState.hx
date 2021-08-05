@@ -28,7 +28,7 @@ class MainMenuState extends MusicBeatState
 	//var configText:FlxText;
 	//var configSelected:Int = 0;
 	
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'donate', "options"];
+	var optionShit:Array<String> = ['freeplay', "options"];
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -60,7 +60,7 @@ class MainMenuState extends MusicBeatState
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 	
-		magenta = new FlxSprite(-80).loadGraphic('assets/images/menuBGMagenta.png');
+		magenta = new FlxSprite(-80).loadGraphic('assets/images/menuBGBlue.png');
 		magenta.scrollFactor.x = 0;
 		magenta.scrollFactor.y = 0.18;
 		magenta.setGraphicSize(Std.int(magenta.width * 1.18));
@@ -78,7 +78,7 @@ class MainMenuState extends MusicBeatState
 
 		for (i in 0...optionShit.length)
 		{
-			var menuItem:FlxSprite = new FlxSprite(0, 60 + (i * 160));
+			var menuItem:FlxSprite = new FlxSprite(0, 60 + ((i + 1) * 160));
 			menuItem.frames = tex;
 			
 			menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
