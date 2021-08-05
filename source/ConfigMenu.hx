@@ -58,7 +58,6 @@ class ConfigMenu extends MusicBeatState
 									"HP DRAIN MULTIPLIER",
 									"DOWNSCROLL",
 									"NOTE GLOW",
-									"IMPROVED HEALTH HEADS",
 									"CONTROLLER SCHEME",
 									"[EDIT KEY BINDS]"
 									];
@@ -72,7 +71,6 @@ class ConfigMenu extends MusicBeatState
 									"Modifies how much Health you lose when missing a note.",
 									"Makes notes appear from the top instead the bottom.",
 									"Makes note arrows glow if they are able to be hit.",
-									"Adds low health icons for characters missing them and adds winning icons.\n[This disables modded health icons unless there is a version of the files included in the mod.]",
 									"TEMP",
 									"Change key binds."
 									];
@@ -104,7 +102,7 @@ class ConfigMenu extends MusicBeatState
 	{	
 	
 		if(startSong)
-			FlxG.sound.playMusic('assets/music/configurator' + TitleState.soundExt);
+			FlxG.sound.playMusic('assets/music/configArrange.ogg');
 		else
 			startSong = true;
 
@@ -158,7 +156,7 @@ class ConfigMenu extends MusicBeatState
 		add(optionTitle);
 			
 		
-		configText = new FlxText(0, 215, 1280, "", 48);
+		configText = new FlxText(0, 230, 1280, "", 48);
 		configText.scrollFactor.set(0, 0);
 		configText.setFormat("assets/fonts/Funkin-Bold.otf", 48, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		configText.borderSize = 3;
@@ -401,12 +399,7 @@ class ConfigMenu extends MusicBeatState
 							FlxG.sound.play('assets/sounds/scrollMenu' + TitleState.soundExt);
 							glowValue = !glowValue;
 						}
-					case 8: //Heads
-						if (controls.RIGHT_P || controls.LEFT_P || controls.ACCEPT) {
-							FlxG.sound.play('assets/sounds/scrollMenu' + TitleState.soundExt);
-							iconValue = !iconValue;
-						}
-					case 9: //Controller Stuff
+					case 8: //Controller Stuff
 						if (controls.RIGHT_P)
 							{
 								FlxG.sound.play('assets/sounds/scrollMenu' + TitleState.soundExt);
@@ -431,7 +424,7 @@ class ConfigMenu extends MusicBeatState
 								FlxG.switchState(new KeyBindMenuController());
 							}
 
-					case 10: //Binds
+					case 9: //Binds
 						if (controls.ACCEPT) {
 							FlxG.sound.play('assets/sounds/scrollMenu' + TitleState.soundExt);
 							canChangeItems = false;
@@ -512,7 +505,7 @@ class ConfigMenu extends MusicBeatState
 			case 3:
 				descText.text = ghostTapDesc[randomTapValue];
 				
-			case 9:
+			case 8:
 				descText.text = controlSchemesDesc[scheme];
 
 			default:
@@ -536,8 +529,7 @@ class ConfigMenu extends MusicBeatState
 			case 5: return healthDrainValue / 10.0;
 			case 6: return downValue;
 			case 7: return glowValue;
-			case 8: return iconValue;
-			case 9: return controlSchemes[scheme];
+			case 8: return controlSchemes[scheme];
 
 		}
 

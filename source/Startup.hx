@@ -37,7 +37,7 @@ class Startup extends MusicBeatState
         FlxG.sound.muteKeys = null;
 
         splash = new FlxSprite(0, 0);
-        splash.frames = FlxAtlasFrames.fromSparrow('assets/images/fpsPlus/rozeSplash.png', 'assets/images/fpsPlus/rozeSplash.xml');
+        splash.frames = FlxAtlasFrames.fromSparrow('assets/images/fpsPlus/mordetwiLogo.png', 'assets/images/fpsPlus/mordetwiLogo.xml');
         splash.animation.addByPrefix('start', 'Splash Start', 24, false);
         splash.animation.addByPrefix('end', 'Splash End', 24, false);
         add(splash);
@@ -117,7 +117,7 @@ class Startup extends MusicBeatState
             FlxG.sound.cache("assets/music/" + x + "_Inst.ogg");
             trace("Chached " + x);
         }
-        FlxG.sound.cache("assets/music/klaskiiLoop.ogg");
+        FlxG.sound.cache("assets/music/menuLoop.ogg");
         loadingText.text = "Songs cached...";
         songsCached = true;
     }

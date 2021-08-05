@@ -74,7 +74,7 @@ class StoryMenuState extends MusicBeatState
 	
 		if (FlxG.sound.music == null)
 		{
-			FlxG.sound.playMusic("assets/music/klaskiiLoop.ogg", 0.75);
+			FlxG.sound.playMusic("assets/music/menuLoop.ogg", 0.75);
 		}
 
 		persistentUpdate = persistentDraw = true;

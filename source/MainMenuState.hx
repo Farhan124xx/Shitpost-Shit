@@ -43,7 +43,7 @@ class MainMenuState extends MusicBeatState
 
 		if (!FlxG.sound.music.playing)
 		{	
-			FlxG.sound.playMusic("assets/music/klaskiiLoop.ogg", 0.75);
+			FlxG.sound.playMusic("assets/music/menuLoop.ogg", 0.75);
 		}
 
 		persistentUpdate = persistentDraw = true;
@@ -202,13 +202,10 @@ class MainMenuState extends MusicBeatState
 
 								switch (daChoice)
 								{
-									case 'story mode':
-										FlxG.switchState(new StoryMenuState());
-										trace("Story Menu Selected");
 									case 'freeplay':
-										FreeplayState.startingSelection = 0;
-										FlxG.switchState(new FreeplayState());
-										trace("Freeplay Menu Selected");
+										PlayState.SONG = Song.loadFromJson("airplanes-hard", "airplanes");
+										PlayState.returnLocation = "main";
+										FlxG.switchState(new PlayState());
 									case 'options':
 										FlxG.switchState(new ConfigMenu());
 										trace("options time");
