@@ -49,6 +49,8 @@ class TitleVidState extends MusicBeatState
 
 		FlxG.save.bind('data');
 
+		Config.configCheck();
+
 		Highscore.load();
 
 		if (FlxG.save.data.weekUnlocked != null)

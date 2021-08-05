@@ -1,6 +1,6 @@
 package;
 
-import webm.WebmPlayer;
+//import webm.WebmPlayer;
 import flixel.FlxGame;
 import openfl.display.FPS;
 import openfl.display.Sprite;
@@ -9,12 +9,6 @@ class Main extends Sprite
 {
 
 	public static var fpsDisplay:FPS;
-
-	#if web
-		var vHandler:VideoHandler;
-	#elseif desktop
-		var webmHandle:WebmHandler;
-	#end
 
 	public static var novid:Bool = Sys.args().contains("-novid");
 	public static var nopreload:Bool = Sys.args().contains("-nopreload");

@@ -132,6 +132,7 @@ class TitleState extends MusicBeatState
 			if (pressedEnter && !transitioning)
 			{
 				titleText.animation.play('press');
+				Config.configCheck();
 
 				FlxG.sound.play('assets/sounds/confirmMenu' + TitleState.soundExt, 0.7);
 
