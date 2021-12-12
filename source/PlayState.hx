@@ -902,7 +902,13 @@ class PlayState extends MusicBeatState
 						sustainNote.x += FlxG.width / 2; // general offset
 					}
 				}
-
+                var creditTxt:FlxText = new FlxText(4,healthBarBG.y + 20,0,("Port by Farhan124xx "), 24);
+        creditTxt.scrollFactor.set();
+                creditTxt.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+                        creditTxt.borderColor = FlxColor.BLACK;
+                                creditTxt.borderSize = 3;
+                                        creditTxt.borderStyle = FlxTextBorderStyle.OUTLINE;
+                                                add(creditTxt);
 				swagNote.mustPress = gottaHitNote;
 
 				if (swagNote.mustPress)
